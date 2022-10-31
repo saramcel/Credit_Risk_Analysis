@@ -21,7 +21,7 @@ Naive random oversampling creates a larger sample from the minority class by ran
 
 #### SMOTE Oversampling
 SMOTE oversampling, or synthetic minority oversampling, interpolates new instances of data to increase the sample size of the minority class. This is also vulnerable to outliers, but it bypasses some other issues with random oversampling. 
-* Accuracy Score: 0.6628910844779521z
+* Accuracy Score: 0.6628910844779521
 * Confusion Matrix: ![cm2](link)
 * Classification Report: ![cr2](link)
 * As with the first oversampling model, this model is pretty good at detecting all the low risk loans, but the precision for high risk loans is still very low (0.01), meaning that the model mistakes a lot of low risk loans for high risk loans. This means that many will be denied their loan who could actually pay it off, which stifles lending to good customers. 

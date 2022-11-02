@@ -55,6 +55,7 @@ This model is a balanced random forest classifier which randomly under-samples e
 * Confusion Matrix: ![cm5](link)
 * Classification Report:![cr5](link)
 * This model has the highest accuracy score of all the models so far. The model detects low-risk loans very well (high precision, high recall, and high F1 score). Although it finds the majority of high-risk loans, the precision is still low, meaning that many loans are inaccurately classified as high risk (false positives), and the recall is only 0.63, which means that several high risk loans are missed (false negatives). 
+
 * We were also able to get a list of the most predictive features. The top five features and their relative importances are listed below.
 
 ![ri5](link)
@@ -64,29 +65,7 @@ EasyEnsemble consists of a bag of Adaboost learners. Adaboost runs models in seq
 * Accuracy Score: 0.9271144308672863
 * Confusion Matrix: ![cm6](link)
 * Classification Report:![cr6](link)
-* The accuracy of this model is very high. Further, there 
+* The accuracy of this model is the highest of the models we have explored. Although the precision for detecting high risk loans is still low at 0.07, meaning that there are still many false positives for the high risk category, this is the best precision we have seen of any model and the lowest count of false positives (1118). The recall rate for both high risk and low risk loans are both over 0.9 in this model. That means that the model avoids false negatives (predicted low risk but actually high risk) which means that the model can be trusted not to lead to very many risky loans by accident. The F1 score for low risk loans is 0.97, which indicates a very strong ability to detect low risk loans.
 
-
-
-Summary: Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. If you do not recommend any of the models, justify your reasoning.
-
-Deliverable 4 Requirements
-Structure, Organization, and Formatting (6 points)
-The written analysis has the following structure, organization, and formatting:
-
-There is a title, and there are multiple sections (2 pt)
-Each section has a heading and subheading (2 pt)
-Links to images are working, and code is formatted and displayed correctly (2 pt).
-Analysis (24 points)
-The written analysis has the following:
-
-Overview of the loan prediction risk analysis:
-
-The purpose of this analysis is well defined (4 pt)
-Results:
-
-There is a bulleted list that describes the balanced accuracy score and the precision and recall scores of all six machine learning models (15 pt)
-Summary:
-
-There is a summary of the results (2 pt)
-There is a recommendation on which model to use, or there is no recommendation with a justification (3 pt)
+## Summary
+The objective is to help predict credit risk to reduce the number of risky loans (to avoid loan default) and increase the number of low risk loans (to not miss out on good customers). The model that does that the best is EasyEnsemble Classifier. This uses a bag of boosted learners to reduce errors. This model overpredicts high risk loans, which could mean missed profits, but it also does not allow nearly as many true high risk loans to be misclassified as low risk, which could turn out even worse. This model does a good job of fulfilling both of the objectives. 

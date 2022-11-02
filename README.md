@@ -46,6 +46,28 @@ After oversampling the high risk loans and then cleaning the data with the edite
 * Classification Report:![cr4](link)
 * This model has gotten the highest recall score for high risk loans of the models so far (0.72), and it predicted the most correct high risk loans, 73 true positives, which is three more than naive random oversampling and centroid undersampling (each predicted 70 correct high risk loans).
 
+### Ensemble Classifier
+Ensemble classifiers use many weak learners in combination to produce a model with better performance, or a strong learner. Many algorithms are combined to make the predictions in these models. 
+
+#### Balanced Random Forest
+This model is a balanced random forest classifier which randomly under-samples each boostrap sample to balance it. This model works by aggregation, meaning that the weak learners (classifiers) make predictions at the same time (i.e. not sequentially) and the prediction that we use is the one with the most votes.
+* Accuracy Score: 0.7586962302234792
+* Confusion Matrix: ![cm5](link)
+* Classification Report:![cr5](link)
+* This model has the highest accuracy score of all the models so far. The model detects low-risk loans very well (high precision, high recall, and high F1 score). Although it finds the majority of high-risk loans, the precision is still low, meaning that many loans are inaccurately classified as high risk (false positives), and the recall is only 0.63, which means that several high risk loans are missed (false negatives). 
+* We were also able to get a list of the most predictive features. The top five features and their relative importances are listed below.
+
+![ri5](link)
+
+#### Easy Ensemble Classifier
+EasyEnsemble consists of a bag of Adaboost learners. Adaboost runs models in sequence and the errors of the previous model are given extra weight in the current model until the error rate is minimized. The learners are trained on different balanced boostrap samples. The balancing is achieved by random under-sampling. 
+* Accuracy Score: 0.9271144308672863
+* Confusion Matrix: ![cm6](link)
+* Classification Report:![cr6](link)
+* The accuracy of this model is very high. Further, there 
+
+
+
 Summary: Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. If you do not recommend any of the models, justify your reasoning.
 
 Deliverable 4 Requirements

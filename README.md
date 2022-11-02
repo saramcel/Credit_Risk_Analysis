@@ -44,7 +44,7 @@ After oversampling the high risk loans and then cleaning the data with the edite
 * Accuracy Score: 0.6447993752836463
 * Confusion Matrix:![cm4](https://github.com/saramcel/Credit_Risk_Analysis/blob/f078092a8963de1f24822ee0c783292baf59612c/Resources/cm4.png)
 * Classification Report:![cr4](https://github.com/saramcel/Credit_Risk_Analysis/blob/f078092a8963de1f24822ee0c783292baf59612c/Resources/cr4.png)
-* This model has gotten the highest recall score for high risk loans of the models so far (0.72), and it predicted the most correct high risk loans, 73 true positives, which is three more than naive random oversampling and centroid undersampling (each predicted 70 correct high risk loans).
+* This model has gotten the highest recall score for high risk loans of the resampling models (0.72), and it predicted the most correct high risk loans, 73 true positives, which is three more than naive random oversampling and centroid undersampling (each predicted 70 correct high risk loans). This method still permits 7409 false positive high risk classifications and misses 28 cases of actual risky loans. 
 
 ### Ensemble Classifier
 Ensemble classifiers use many weak learners in combination to produce a model with better performance, or a strong learner. Many algorithms are combined to make the predictions in these models. 
